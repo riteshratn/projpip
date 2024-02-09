@@ -1,4 +1,4 @@
-# weeklySchedule
+# Project
 This project created a backend API for managing and updating week data, exercise data and more.
 
 # How to Run the Project
