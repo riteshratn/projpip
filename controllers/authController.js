@@ -67,17 +67,6 @@ const currentUser = asyncHandler(async (req,res) => {
   res.json(req.user);
 });
 
-const updateUser = async (req, res) => {
-  const userId = req.params.userId;
-  const { newData } = req.body;
 
-  try {
-    const updatedUser = await User.findByIdAndUpdate(userId, newData, { new: true });
-    res.json(updatedUser);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Internal Server Error' });
-  }
-};
   
-module.exports = { registerUser, loginUser, currentUser, updateUser };
+module.exports = { registerUser, loginUser, currentUser };
