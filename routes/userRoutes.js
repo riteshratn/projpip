@@ -11,6 +11,4 @@ router.post('/login', validateUser(), loginUser);
 
 router.get('/current',validateToken, currentUser);
 
-router.put('/update/:userId', updateUser);
-
 module.exports = router;
